@@ -83,8 +83,6 @@ def check(inf):
          
 
 
-
-
 language="EN"
 
 def translate(text):
@@ -140,12 +138,7 @@ def rrss_menu_cat(bot, update):
                         reply_markup=rrss_menu_keyboard_cat()) 
 
 
-
-def sos_menu_cat(bot, update):
-  bot.sendMessage(chat_id=update.message.chat_id, text=translate("Gracias! El idioma ha sido configurado correctamente").text)    
-  #bot.send_contact(chat_id=update.message.chat_id, phone_number= "112", first_name="Teléfono de emergencias")
-  
-
+ 
 
 ############################ Keyboards #########################################
 def main_menu_keyboard_cat():
@@ -175,7 +168,6 @@ def rrss_menu_keyboard_cat():
 
  
 
-
 #########################EXTRA#############################
 
 def echo(bot, update):
@@ -204,8 +196,6 @@ def where(bot, update, user_data):
         bot.send_message(chat_id=update.message.chat_id, text='💣') 
 
  
-
-
 
 malaltia=""
 def info(bot, update):
@@ -242,11 +232,6 @@ def idioma(bot, update):
  
 
 
-""" 
-def info2(bot, update):
-  print("aquest si")
-"""
-
 ############################# Messages #########################################
 def main_menu_message_cat():
   return "Hola! Benvingut a RareBot!\nPots buscar Informació d\'enfermetats minoritàries, buscar Material, veure els Links d\'interès, fer  un Test de concienciació o fer Donatius!\nPots buscar informació de la malaltia escrivint /info + el nom de la malaltia!"
@@ -272,10 +257,8 @@ updater.dispatcher.add_handler(CallbackQueryHandler(main_menu_cat, pattern='main
 updater.dispatcher.add_handler(CallbackQueryHandler(link_menu_cat, pattern='link_menu_keyboard_cat'))
 updater.dispatcher.add_handler(CallbackQueryHandler(rrss_menu_cat, pattern='rrss_menu_keyboard_cat'))
 updater.dispatcher.add_handler(CallbackQueryHandler(sos_menu_cat))
-#updater.dispatcher.add_handler(MessageHandler(Filters.location, where, pass_user_data=True))
 updater.dispatcher.add_handler(CommandHandler("help", help))
 updater.dispatcher.add_handler(CommandHandler('info', info))
-#updater.dispatcher.add_handler(CommandHandler('language', language))
 updater.dispatcher.add_handler(CommandHandler('idioma', idioma))
 updater.dispatcher.add_handler(MessageHandler(Filters.location, where, pass_user_data=True))  
 
