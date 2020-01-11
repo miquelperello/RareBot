@@ -12,6 +12,7 @@ We used the Telegram Bot API, using Python we built a chatbot with a friendly UI
 
 We also used WebScraping to extract high quality information about minority diseases, and we implemented a location based information display.
 
+
 ## Challenges we ran into
 We have had problems related to the short time available
 Telegram API is a bit hard to use, and we find problems related to build our idea using Telegram Structures
